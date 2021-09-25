@@ -3,7 +3,7 @@ import {Button, Menu, Typography, Avatar} from 'antd';
 import {Link} from 'react-router-dom';
 import {HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined} from '@ant-design/icons';
 
-const icon = "https://www.citypng.com/public/uploads/preview/-51614893185k4ffbcatrp.png";
+const icon = "https://i.ibb.co/Z11pcGG/cryptocurrency.png";
 const Navbar = () => {
     return (
         <div className="nav-container">
@@ -15,6 +15,20 @@ const Navbar = () => {
                     </Link>
                 </Typography.Title>
             </div>
+            <Menu theme="dark">
+                <Menu.Item icon = {<HomeOutlined />}>
+                    <Link to = "/"> Home </Link>
+                </Menu.Item>
+                <Menu.Item icon = {<FundOutlined />}>
+                    <Link to = "/Cryptocurrencies"> Cryptocurrencies</Link>
+                </Menu.Item>
+                <Menu.Item icon = {<MoneyCollectOutlined />}>
+                    <Link to = "/exchanges"> Exchanges</Link>
+                </Menu.Item>
+                <Menu.Item icon = {<BulbOutlined />}>
+                    <Link to = "/news"> News</Link>
+                </Menu.Item>
+            </Menu>
          </div>  
     )
 }
